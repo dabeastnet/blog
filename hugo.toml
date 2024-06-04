@@ -54,7 +54,7 @@ customJs = ["js/blog.js"]
   [[menu.main]]
   name = "CV"
   weight = 10
-  url = '../../blog/assets/Dieter Beckers CV 2022.pdf'
+  url = 'https://dabeastnet.github.io/blog/assets/Dieter%20Beckers%20CV%202022.pdf'
 
 [taxonomies]
   category = "categories"
