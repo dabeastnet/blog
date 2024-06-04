@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.124.1">
+
+  <title>ConvertTo AsciiArt &middot; Dieter Beckers</title>
+
+  <meta name="description" content="" />
+
+  <meta itemprop="name" content="ConvertTo AsciiArt">
+<meta itemprop="description" content="ConvertTo-AsciiArt Link: Github
+Overview The ConvertTo-AsciiArt PowerShell function transforms input text into ASCII art, supporting uppercase letters, numbers, and a variety of special characters."><meta itemprop="datePublished" content="2024-04-28T19:44:26+02:00" />
+<meta itemprop="dateModified" content="2024-04-28T19:44:26+02:00" />
+<meta itemprop="wordCount" content="523">
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="ConvertTo AsciiArt"/>
+<meta name="twitter:description" content="ConvertTo-AsciiArt Link: Github
+Overview The ConvertTo-AsciiArt PowerShell function transforms input text into ASCII art, supporting uppercase letters, numbers, and a variety of special characters."/>
+
+
+<meta property="og:title" content="ConvertTo AsciiArt" />
+<meta property="og:description" content="ConvertTo-AsciiArt Link: Github
+Overview The ConvertTo-AsciiArt PowerShell function transforms input text into ASCII art, supporting uppercase letters, numbers, and a variety of special characters." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/convertto-asciiart/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-28T19:44:26+02:00" />
+<meta property="article:modified_time" content="2024-04-28T19:44:26+02:00" />
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "http://localhost:1313/#author",
+      "name": "Dieter Beckers",
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "http://localhost:1313/images/profile.png"
+        
+      },
+      "description": "My Portfolio"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:1313/#website",
+      "url": "http://localhost:1313/",
+      "name": "Dieter Beckers",
+      "description": "My Portfolio",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "inLanguage": "en-us"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/posts/convertto-asciiart/#webpage",
+      "url": "http://localhost:1313/posts/convertto-asciiart/",
+      "name": "ConvertTo AsciiArt",
+      "isPartOf": {
+        "@id": "http://localhost:1313/#website"
+      },
+      "about": {
+         "@id": "http://localhost:1313/#author"
+      },
+      "datePublished": "2024-04-28T19:44:26+02:00",
+      "dateModified": "2024-04-28T19:44:26+02:00",
+      "description": "ConvertTo-AsciiArt Link: Github\nOverview The ConvertTo-AsciiArt PowerShell function transforms input text into ASCII art, supporting uppercase letters, numbers, and a variety of special characters.",
+      "inLanguage": "en-us",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "http://localhost:1313/posts/convertto-asciiart/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "isPartOf": {
+        "@id": "http://localhost:1313/posts/convertto-asciiart/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:1313/posts/convertto-asciiart/#webpage"
+      },
+      "headline": "ConvertTo AsciiArt",
+      "datePublished": "2024-04-28T19:44:26+02:00",
+      "dateModified": "2024-04-28T19:44:26+02:00",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "keywords": [
+      ],
+      "articleSection": [
+      ],
+      "inLanguage": "en-us",
+      "author": {
+        "@type": "Person",
+        "name":  null 
+      },
+      "potentialAction": [
+        {
+          "@type": "CommentAction",
+          "name": "Comment",
+          "target": [
+            "http://localhost:1313/posts/convertto-asciiart/#comments"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  <link type="text/css" rel="stylesheet" href="/css/blog.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <a href="http://localhost:1313/">
+            <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
+        </div>
+        
+      
+
+      <h1>Dieter Beckers</h1>
+
+      
+      <p class="lead">My Portfolio</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="http://localhost:1313/">Home</a>
+        </li>
+        <li>
+          <a href="../assets/Dieter%20Beckers%20CV%202022.pdf">CV</a>
+        </li><li>
+          <a href="/posts/">Projects</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/dieter-beckers/" rel="me" title="Linkedin" target="_blank">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/dabeastnet" rel="me" title="GitHub" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1 class="title">ConvertTo AsciiArt</h1>
+  
+
+  <div class="post-date">
+    <time datetime="2024-04-28T19:44:26&#43;0200">Apr 28, 2024</time> <span class="readtime">&middot; 3 min read</span>
+  </div>
+
+  <div>
+  <h1 id="convertto-asciiart">ConvertTo-AsciiArt</h1>
+<p>Link: <a href="https://github.com/dabeastnet/ConvertTo-AsciiArt/tree/main">Github</a></p>
+<h2 id="overview">Overview</h2>
+<p>The <code>ConvertTo-AsciiArt</code> PowerShell function transforms input text into ASCII art, supporting uppercase letters, numbers, and a variety of special characters. This utility is excellent for embellishing console outputs, creating text-based art, or simply for entertainment and educational purposes.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Broad Character Support:</strong> Handles letters (A-Z), digits (0-9), and common special characters, offering a wide range of artistic expression.</li>
+<li><strong>Pipeline Compatibility:</strong> Accepts input via pipeline, enabling seamless integration with other PowerShell commands and scripts.</li>
+<li><strong>Customizable Art Maps:</strong> Easily extendable character mappings allow for customization and addition of new ASCII art representations.</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>PowerShell 5.1 or higher is required to ensure compatibility and full functionality.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>No specific installation process is needed. You can integrate the <code>ConvertTo-AsciiArt</code> function into your scripts or PowerShell session by simply copying the function definition.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="converting-text-to-ascii-art">Converting Text to ASCII Art</h3>
+<p>To convert a simple text string to ASCII art:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>ConvertTo-AsciiArt -InputObject <span style="color:#e6db74">&#34;Hello&#34;</span>
+</span></span></code></pre></div><p>Output will be the ASCII art representation of &ldquo;Hello&rdquo;:</p>
+<pre tabindex="0"><code>H   H EEEE  L     L      OOO
+H   H E     L     L     O   O
+HHHHH EEE   L     L     O   O
+H   H E     L     L     O   O
+H   H EEEE  LLLL  LLLL   OOO
+</code></pre><h3 id="using-pipeline-for-conversion">Using Pipeline for Conversion</h3>
+<p>You can also pipe a string directly into the function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#e6db74">&#34;PowerShell&#34;</span> | ConvertTo-AsciiArt
+</span></span></code></pre></div><p>This will output the ASCII art representation of &ldquo;PowerShell&rdquo;:</p>
+<pre tabindex="0"><code>PPP    OOO  W   W EEEE  RRR    SSS  H   H EEEE  L     L
+P  P  O   O W   W E     R  R  S     H   H E     L     L
+PPP   O   O W W W EEE   RRR    SSS  HHHHH EEE   L     L
+P     O   O WW WW E     R R       S H   H E     L     L
+P      OOO  W   W EEEE  R  R  SSSS  H   H EEEE  LLLL  LLLL
+</code></pre><h3 id="extended-character-support">Extended Character Support</h3>
+<p>Demonstrates converting a string with mixed characters:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#e6db74">&#34;13375P34K!?&#34;</span> | ConvertTo-AsciiArt
+</span></span></code></pre></div><p>Displays ASCII art for each character, including spaces and exclamation marks:</p>
+<pre tabindex="0"><code>  1   3333  3333  77777 55555 PPP   3333  4  4  K  K   !!!   ???
+ 11       3     3    7  5     P  P      3 4  4  K K    !!!  ?   ?
+  1    333   333    7   5555  PPP    333  44444 KK     !!!     ?
+  1       3     3  7        5 P         3    4  K K
+11111 3333  3333  7     5555  P     3333     4  K  K   !!!    ?
+</code></pre><h2 id="full-special-characters-list">Full special characters list</h2>
+<ul>
+<li><code>!</code> Exclamation mark</li>
+<li><code>@</code> At symbol</li>
+<li><code>#</code> Hash (Pound) symbol</li>
+<li><code>$</code> Dollar sign</li>
+<li><code>%</code> Percent sign</li>
+<li><code>^</code> Caret (Circumflex accent)</li>
+<li><code>&amp;</code> Ampersand</li>
+<li><code>*</code> Asterisk</li>
+<li><code>(</code> Open parenthesis</li>
+<li><code>)</code> Close parenthesis</li>
+<li><code>-</code> Hyphen-minus</li>
+<li><code>+</code> Plus sign</li>
+<li><code>=</code> Equal sign</li>
+<li><code>[</code> Open square bracket</li>
+<li><code>]</code> Close square bracket</li>
+<li><code>{</code> Open curly bracket</li>
+<li><code>}</code> Close curly bracket</li>
+<li><code>|</code> Vertical bar</li>
+<li><code>;</code> Semicolon</li>
+<li><code>:</code> Colon</li>
+<li><code>&quot;</code> Double quotation mark</li>
+<li><code>'</code> Single quotation mark (Apostrophe)</li>
+<li><code>,</code> Comma</li>
+<li><code>.</code> Period (Full stop)</li>
+<li><code>/</code> Slash (Forward slash)</li>
+<li><code>\</code> Backslash</li>
+<li><code>?</code> Question mark</li>
+<li><code>&lt;</code> Less-than sign</li>
+<li><code>&gt;</code> Greater-than sign</li>
+<li><code>_</code> Underscore</li>
+<li><code>`</code> Grave accent (Backtick)</li>
+<li><code>~</code> Tilde</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>Your contributions to enhance functionality, extend character support, or improve documentation are highly appreciated. Feel free to fork the project, implement your changes, and submit a pull request for review.</p>
+<h2 id="license">License</h2>
+<p>This project is licensed under the GNU General Public License v3.0 - see the COPYING file for more details.</p>
+
+  </div>
+
+  
+
+
+  <div class="share-buttons">
+  <a class="twitter-share-button"
+     href="#"
+     title="Share on Twitter"
+     data-url="http://localhost:1313/posts/convertto-asciiart/"
+     data-text="ConvertTo AsciiArt"><i class="fab fa-twitter"></i></a>
+
+  <a class="linkedin-share-button"
+     href="#"
+     title="Share on LinkedIn"
+     data-url="http://localhost:1313/posts/convertto-asciiart/"
+     data-text="ConvertTo AsciiArt"><i class="fab fa-linkedin-in"></i></a>
+
+  <a class="facebook-share-button"
+     href="#"
+     title="Share on Facebook"
+     data-url="http://localhost:1313/posts/convertto-asciiart/"
+     data-text="ConvertTo AsciiArt"><i class="fab fa-facebook"></i></a>
+
+  <a class="telegram-share-button"
+     href="#"
+     title="Share on Telegram"
+     data-url="http://localhost:1313/posts/convertto-asciiart/"
+     data-text="ConvertTo AsciiArt"><i class="fab fa-telegram"></i></a>
+
+  <a class="pinterest-share-button"
+     href="#"
+     title="Share on Pinterest"
+     data-url="http://localhost:1313/posts/convertto-asciiart/"
+     data-text="ConvertTo AsciiArt"><i class="fab fa-pinterest"></i></a>
+</div>
+
+
+  
+</div>
+  </main>
+
+  <footer>
+  <div>
+    <p>
+      &copy; Dieter Beckers 2024
+
+      &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>
+
+      
+    </p>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
+
+  <script src="/js/blog.js"></script>
+
+    
+</body>
+</html>

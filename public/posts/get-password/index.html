@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.124.1">
+
+  <title>Get Password &middot; Dieter Beckers</title>
+
+  <meta name="description" content="" />
+
+  <meta itemprop="name" content="Get Password">
+<meta itemprop="description" content="Get-Password Link: Github
+Introduction The Get-Password PowerShell module provides a simple yet powerful tool for generating strong, random passwords."><meta itemprop="datePublished" content="2024-04-28T19:44:55+02:00" />
+<meta itemprop="dateModified" content="2024-04-28T19:44:55+02:00" />
+<meta itemprop="wordCount" content="250">
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Get Password"/>
+<meta name="twitter:description" content="Get-Password Link: Github
+Introduction The Get-Password PowerShell module provides a simple yet powerful tool for generating strong, random passwords."/>
+
+
+<meta property="og:title" content="Get Password" />
+<meta property="og:description" content="Get-Password Link: Github
+Introduction The Get-Password PowerShell module provides a simple yet powerful tool for generating strong, random passwords." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/get-password/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-28T19:44:55+02:00" />
+<meta property="article:modified_time" content="2024-04-28T19:44:55+02:00" />
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "http://localhost:1313/#author",
+      "name": "Dieter Beckers",
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "http://localhost:1313/images/profile.png"
+        
+      },
+      "description": "My Portfolio"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:1313/#website",
+      "url": "http://localhost:1313/",
+      "name": "Dieter Beckers",
+      "description": "My Portfolio",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "inLanguage": "en-us"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/posts/get-password/#webpage",
+      "url": "http://localhost:1313/posts/get-password/",
+      "name": "Get Password",
+      "isPartOf": {
+        "@id": "http://localhost:1313/#website"
+      },
+      "about": {
+         "@id": "http://localhost:1313/#author"
+      },
+      "datePublished": "2024-04-28T19:44:55+02:00",
+      "dateModified": "2024-04-28T19:44:55+02:00",
+      "description": "Get-Password Link: Github\nIntroduction The Get-Password PowerShell module provides a simple yet powerful tool for generating strong, random passwords.",
+      "inLanguage": "en-us",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "http://localhost:1313/posts/get-password/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "isPartOf": {
+        "@id": "http://localhost:1313/posts/get-password/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:1313/posts/get-password/#webpage"
+      },
+      "headline": "Get Password",
+      "datePublished": "2024-04-28T19:44:55+02:00",
+      "dateModified": "2024-04-28T19:44:55+02:00",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "keywords": [
+      ],
+      "articleSection": [
+      ],
+      "inLanguage": "en-us",
+      "author": {
+        "@type": "Person",
+        "name":  null 
+      },
+      "potentialAction": [
+        {
+          "@type": "CommentAction",
+          "name": "Comment",
+          "target": [
+            "http://localhost:1313/posts/get-password/#comments"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  <link type="text/css" rel="stylesheet" href="/css/blog.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <a href="http://localhost:1313/">
+            <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
+        </div>
+        
+      
+
+      <h1>Dieter Beckers</h1>
+
+      
+      <p class="lead">My Portfolio</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="http://localhost:1313/">Home</a>
+        </li>
+        <li>
+          <a href="../assets/Dieter%20Beckers%20CV%202022.pdf">CV</a>
+        </li><li>
+          <a href="/posts/">Projects</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/dieter-beckers/" rel="me" title="Linkedin" target="_blank">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/dabeastnet" rel="me" title="GitHub" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1 class="title">Get Password</h1>
+  
+
+  <div class="post-date">
+    <time datetime="2024-04-28T19:44:55&#43;0200">Apr 28, 2024</time> <span class="readtime">&middot; 2 min read</span>
+  </div>
+
+  <div>
+  <h1 id="get-password">Get-Password</h1>
+<p>Link: <a href="https://github.com/dabeastnet/Get-Password">Github</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>The <code>Get-Password</code> PowerShell module provides a simple yet powerful tool for generating strong, random passwords. This module is designed to enhance security for user accounts, encrypted files, and other sensitive data by creating complex passwords. It supports customization options such as password length and the inclusion of numbers and symbols to meet various security policies and preferences.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>PowerShell 5.1 or higher</li>
+<li>Windows 7 or later, or a compatible version of Windows Server</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>No specific installation process is needed. You can integrate the <code>Get-Password</code> function into your scripts or PowerShell session by simply copying the function definition.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="basic-password-generation">Basic Password Generation</h3>
+<p>To generate a simple 12-character password without symbols or numbers:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Password -Length <span style="color:#ae81ff">12</span>
+</span></span></code></pre></div><h3 id="including-numbers-and-symbols">Including Numbers and Symbols</h3>
+<p>To generate a 16-character password that includes numbers and symbols:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Password -Length <span style="color:#ae81ff">16</span> -IncludeNumbers -IncludeSymbols
+</span></span></code></pre></div><h3 id="parameters">Parameters</h3>
+<ul>
+<li><code>-Length [int]</code>: Specifies the desired length of the password. Default is 12 characters.</li>
+<li><code>-IncludeSymbols [switch]</code>: Include special characters in the password.</li>
+<li><code>-IncludeNumbers [switch]</code>: Include numeric characters in the password.</li>
+</ul>
+<h2 id="additional-notes">Additional Notes</h2>
+<ul>
+<li>It&rsquo;s important to strike a balance between password complexity and memorability. While more complex passwords are more secure against brute-force attacks, they can be harder to remember.</li>
+<li>Consider using a password manager to securely store complex passwords.</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions to improve <code>Get-Password</code> are welcome. Please feel free to submit pull requests or open issues to discuss proposed changes or enhancements.</p>
+<h2 id="license">License</h2>
+<p>This project is licensed under the GNU General Public License v3.0 - see the <code>COPYING</code> file for more details.</p>
+
+  </div>
+
+  
+
+
+  <div class="share-buttons">
+  <a class="twitter-share-button"
+     href="#"
+     title="Share on Twitter"
+     data-url="http://localhost:1313/posts/get-password/"
+     data-text="Get Password"><i class="fab fa-twitter"></i></a>
+
+  <a class="linkedin-share-button"
+     href="#"
+     title="Share on LinkedIn"
+     data-url="http://localhost:1313/posts/get-password/"
+     data-text="Get Password"><i class="fab fa-linkedin-in"></i></a>
+
+  <a class="facebook-share-button"
+     href="#"
+     title="Share on Facebook"
+     data-url="http://localhost:1313/posts/get-password/"
+     data-text="Get Password"><i class="fab fa-facebook"></i></a>
+
+  <a class="telegram-share-button"
+     href="#"
+     title="Share on Telegram"
+     data-url="http://localhost:1313/posts/get-password/"
+     data-text="Get Password"><i class="fab fa-telegram"></i></a>
+
+  <a class="pinterest-share-button"
+     href="#"
+     title="Share on Pinterest"
+     data-url="http://localhost:1313/posts/get-password/"
+     data-text="Get Password"><i class="fab fa-pinterest"></i></a>
+</div>
+
+
+  
+</div>
+  </main>
+
+  <footer>
+  <div>
+    <p>
+      &copy; Dieter Beckers 2024
+
+      &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>
+
+      
+    </p>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
+
+  <script src="/js/blog.js"></script>
+
+    
+</body>
+</html>

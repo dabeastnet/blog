@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.124.1">
+
+  <title>ConvertTo Markdown &middot; Dieter Beckers</title>
+
+  <meta name="description" content="" />
+
+  <meta itemprop="name" content="ConvertTo Markdown">
+<meta itemprop="description" content="ConvertTo-Markdown Link: Github
+Overview The ConvertTo-Markdown PowerShell function is designed to help automate the conversion of arrays, hashtables, and PSCustomObjects into Markdown format."><meta itemprop="datePublished" content="2024-04-28T19:41:23+02:00" />
+<meta itemprop="dateModified" content="2024-04-28T19:41:23+02:00" />
+<meta itemprop="wordCount" content="226">
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="ConvertTo Markdown"/>
+<meta name="twitter:description" content="ConvertTo-Markdown Link: Github
+Overview The ConvertTo-Markdown PowerShell function is designed to help automate the conversion of arrays, hashtables, and PSCustomObjects into Markdown format."/>
+
+
+<meta property="og:title" content="ConvertTo Markdown" />
+<meta property="og:description" content="ConvertTo-Markdown Link: Github
+Overview The ConvertTo-Markdown PowerShell function is designed to help automate the conversion of arrays, hashtables, and PSCustomObjects into Markdown format." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/convertto-markdown/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-28T19:41:23+02:00" />
+<meta property="article:modified_time" content="2024-04-28T19:41:23+02:00" />
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "http://localhost:1313/#author",
+      "name": "Dieter Beckers",
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "http://localhost:1313/images/profile.png"
+        
+      },
+      "description": "My Portfolio"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:1313/#website",
+      "url": "http://localhost:1313/",
+      "name": "Dieter Beckers",
+      "description": "My Portfolio",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "inLanguage": "en-us"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/posts/convertto-markdown/#webpage",
+      "url": "http://localhost:1313/posts/convertto-markdown/",
+      "name": "ConvertTo Markdown",
+      "isPartOf": {
+        "@id": "http://localhost:1313/#website"
+      },
+      "about": {
+         "@id": "http://localhost:1313/#author"
+      },
+      "datePublished": "2024-04-28T19:41:23+02:00",
+      "dateModified": "2024-04-28T19:41:23+02:00",
+      "description": "ConvertTo-Markdown Link: Github\nOverview The ConvertTo-Markdown PowerShell function is designed to help automate the conversion of arrays, hashtables, and PSCustomObjects into Markdown format.",
+      "inLanguage": "en-us",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "http://localhost:1313/posts/convertto-markdown/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "isPartOf": {
+        "@id": "http://localhost:1313/posts/convertto-markdown/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:1313/posts/convertto-markdown/#webpage"
+      },
+      "headline": "ConvertTo Markdown",
+      "datePublished": "2024-04-28T19:41:23+02:00",
+      "dateModified": "2024-04-28T19:41:23+02:00",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "keywords": [
+      ],
+      "articleSection": [
+      ],
+      "inLanguage": "en-us",
+      "author": {
+        "@type": "Person",
+        "name":  null 
+      },
+      "potentialAction": [
+        {
+          "@type": "CommentAction",
+          "name": "Comment",
+          "target": [
+            "http://localhost:1313/posts/convertto-markdown/#comments"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  <link type="text/css" rel="stylesheet" href="/css/blog.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <a href="http://localhost:1313/">
+            <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
+        </div>
+        
+      
+
+      <h1>Dieter Beckers</h1>
+
+      
+      <p class="lead">My Portfolio</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="http://localhost:1313/">Home</a>
+        </li>
+        <li>
+          <a href="../assets/Dieter%20Beckers%20CV%202022.pdf">CV</a>
+        </li><li>
+          <a href="/posts/">Projects</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/dieter-beckers/" rel="me" title="Linkedin" target="_blank">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/dabeastnet" rel="me" title="GitHub" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1 class="title">ConvertTo Markdown</h1>
+  
+
+  <div class="post-date">
+    <time datetime="2024-04-28T19:41:23&#43;0200">Apr 28, 2024</time> <span class="readtime">&middot; 2 min read</span>
+  </div>
+
+  <div>
+  <h1 id="convertto-markdown">ConvertTo-Markdown</h1>
+<p>Link: <a href="https://github.com/dabeastnet/ConvertTo-Markdown/tree/main">Github</a></p>
+<h2 id="overview">Overview</h2>
+<p>The <code>ConvertTo-Markdown</code> PowerShell function is designed to help automate the conversion of arrays, hashtables, and PSCustomObjects into Markdown format. This tool is particularly useful for generating documentation, reports, or any content where structured data needs to be presented in a readable Markdown format.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Array to List Conversion:</strong> Converts an array of elements into a Markdown formatted list.</li>
+<li><strong>Hashtable and PSCustomObject to Table Conversion:</strong> Converts hashtables and PSCustomObjects into Markdown tables, making structured data readable and easy to understand.</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>PowerShell 5.1 or higher</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>This function does not require installation. You can simply copy the <code>ConvertTo-Markdown</code> function code into your PowerShell script or session.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="converting-an-array-to-a-markdown-list">Converting an Array to a Markdown List</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$array = <span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">.5</span>
+</span></span><span style="display:flex;"><span>$array | ConvertTo-Markdown
+</span></span></code></pre></div><p>Output:</p>
+<pre tabindex="0"><code>- 1
+- 2
+- 3
+- 4
+- 5
+</code></pre><h3 id="converting-a-hashtable-to-a-markdown-table">Converting a Hashtable to a Markdown Table</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$hashtable = @{Name=<span style="color:#e6db74">&#39;John Doe&#39;</span>; Age=<span style="color:#ae81ff">30</span>; Department=<span style="color:#e6db74">&#39;IT&#39;</span>}
+</span></span><span style="display:flex;"><span>$hashtable | ConvertTo-Markdown
+</span></span></code></pre></div><p>Output:</p>
+<pre tabindex="0"><code>| Name     | Age | Department |
+|----------|-----|------------|
+| John Doe | 30  | IT         |
+</code></pre><h3 id="converting-a-pscustomobject-to-a-markdown-table">Converting a PSCustomObject to a Markdown Table</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$object = [<span style="color:#66d9ef">PSCustomObject</span>]@{Name=<span style="color:#e6db74">&#39;Jane Doe&#39;</span>; Age=<span style="color:#ae81ff">29</span>; Department=<span style="color:#e6db74">&#39;HR&#39;</span>}
+</span></span><span style="display:flex;"><span>$object | ConvertTo-Markdown
+</span></span></code></pre></div><p>Output:</p>
+<pre tabindex="0"><code>| Name     | Age | Department |
+|----------|-----|------------|
+| Jane Doe | 29  | HR         |
+</code></pre><h2 id="contributing">Contributing</h2>
+<p>Contributions to improve <code>ConvertTo-Markdown</code> are welcome. Please feel free to fork the repository, make changes, and submit pull requests.</p>
+<h2 id="license">License</h2>
+<p>GNU General Public License v3.0</p>
+
+  </div>
+
+  
+
+
+  <div class="share-buttons">
+  <a class="twitter-share-button"
+     href="#"
+     title="Share on Twitter"
+     data-url="http://localhost:1313/posts/convertto-markdown/"
+     data-text="ConvertTo Markdown"><i class="fab fa-twitter"></i></a>
+
+  <a class="linkedin-share-button"
+     href="#"
+     title="Share on LinkedIn"
+     data-url="http://localhost:1313/posts/convertto-markdown/"
+     data-text="ConvertTo Markdown"><i class="fab fa-linkedin-in"></i></a>
+
+  <a class="facebook-share-button"
+     href="#"
+     title="Share on Facebook"
+     data-url="http://localhost:1313/posts/convertto-markdown/"
+     data-text="ConvertTo Markdown"><i class="fab fa-facebook"></i></a>
+
+  <a class="telegram-share-button"
+     href="#"
+     title="Share on Telegram"
+     data-url="http://localhost:1313/posts/convertto-markdown/"
+     data-text="ConvertTo Markdown"><i class="fab fa-telegram"></i></a>
+
+  <a class="pinterest-share-button"
+     href="#"
+     title="Share on Pinterest"
+     data-url="http://localhost:1313/posts/convertto-markdown/"
+     data-text="ConvertTo Markdown"><i class="fab fa-pinterest"></i></a>
+</div>
+
+
+  
+</div>
+  </main>
+
+  <footer>
+  <div>
+    <p>
+      &copy; Dieter Beckers 2024
+
+      &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>
+
+      
+    </p>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
+
+  <script src="/js/blog.js"></script>
+
+    
+</body>
+</html>

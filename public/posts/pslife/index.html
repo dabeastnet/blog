@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.124.1">
+
+  <title>PSLife &middot; Dieter Beckers</title>
+
+  <meta name="description" content="" />
+
+  <meta itemprop="name" content="PSLife">
+<meta itemprop="description" content="Conway&rsquo;s Game of Life in PowerShell Link: Github
+This project is a PowerShell script implementation of Conway&rsquo;s Game of Life, a cellular automaton devised by mathematician John Horton Conway."><meta itemprop="datePublished" content="2024-04-28T19:45:12+02:00" />
+<meta itemprop="dateModified" content="2024-04-28T19:45:12+02:00" />
+<meta itemprop="wordCount" content="175">
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="PSLife"/>
+<meta name="twitter:description" content="Conway&rsquo;s Game of Life in PowerShell Link: Github
+This project is a PowerShell script implementation of Conway&rsquo;s Game of Life, a cellular automaton devised by mathematician John Horton Conway."/>
+
+
+<meta property="og:title" content="PSLife" />
+<meta property="og:description" content="Conway&rsquo;s Game of Life in PowerShell Link: Github
+This project is a PowerShell script implementation of Conway&rsquo;s Game of Life, a cellular automaton devised by mathematician John Horton Conway." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/pslife/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-28T19:45:12+02:00" />
+<meta property="article:modified_time" content="2024-04-28T19:45:12+02:00" />
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "http://localhost:1313/#author",
+      "name": "Dieter Beckers",
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "http://localhost:1313/images/profile.png"
+        
+      },
+      "description": "My Portfolio"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:1313/#website",
+      "url": "http://localhost:1313/",
+      "name": "Dieter Beckers",
+      "description": "My Portfolio",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "inLanguage": "en-us"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/posts/pslife/#webpage",
+      "url": "http://localhost:1313/posts/pslife/",
+      "name": "PSLife",
+      "isPartOf": {
+        "@id": "http://localhost:1313/#website"
+      },
+      "about": {
+         "@id": "http://localhost:1313/#author"
+      },
+      "datePublished": "2024-04-28T19:45:12+02:00",
+      "dateModified": "2024-04-28T19:45:12+02:00",
+      "description": "Conway\u0026rsquo;s Game of Life in PowerShell Link: Github\nThis project is a PowerShell script implementation of Conway\u0026rsquo;s Game of Life, a cellular automaton devised by mathematician John Horton Conway.",
+      "inLanguage": "en-us",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "http://localhost:1313/posts/pslife/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "isPartOf": {
+        "@id": "http://localhost:1313/posts/pslife/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:1313/posts/pslife/#webpage"
+      },
+      "headline": "PSLife",
+      "datePublished": "2024-04-28T19:45:12+02:00",
+      "dateModified": "2024-04-28T19:45:12+02:00",
+      "publisher": {
+        "@id": "http://localhost:1313/#author"
+      },
+      "keywords": [
+      ],
+      "articleSection": [
+      ],
+      "inLanguage": "en-us",
+      "author": {
+        "@type": "Person",
+        "name":  null 
+      },
+      "potentialAction": [
+        {
+          "@type": "CommentAction",
+          "name": "Comment",
+          "target": [
+            "http://localhost:1313/posts/pslife/#comments"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  <link type="text/css" rel="stylesheet" href="/css/blog.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <a href="http://localhost:1313/">
+            <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
+        </div>
+        
+      
+
+      <h1>Dieter Beckers</h1>
+
+      
+      <p class="lead">My Portfolio</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="http://localhost:1313/">Home</a>
+        </li>
+        <li>
+          <a href="../assets/Dieter%20Beckers%20CV%202022.pdf">CV</a>
+        </li><li>
+          <a href="/posts/">Projects</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/dieter-beckers/" rel="me" title="Linkedin" target="_blank">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/dabeastnet" rel="me" title="GitHub" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1 class="title">PSLife</h1>
+  
+
+  <div class="post-date">
+    <time datetime="2024-04-28T19:45:12&#43;0200">Apr 28, 2024</time> <span class="readtime">&middot; 1 min read</span>
+  </div>
+
+  <div>
+  <h1 id="conways-game-of-life-in-powershell">Conway&rsquo;s Game of Life in PowerShell</h1>
+<p>Link: <a href="https://github.com/dabeastnet/PSLife">Github</a></p>
+<p>This project is a PowerShell script implementation of Conway&rsquo;s Game of Life, a cellular automaton devised by mathematician John Horton Conway. The game simulates the life cycle of cells on a grid based on a set of rules. This implementation features a grid where cells evolve through generations, showcasing how complex patterns can emerge from simple rules.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Randomized initial state for the grid.</li>
+<li>Customizable grid size.</li>
+<li>Continuous simulation until manually stopped.</li>
+<li>Display of the grid in the console, with live cells represented as blocks.</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Windows PowerShell 5.1 or PowerShell Core 6.0 and above.</li>
+<li>A terminal that supports Unicode characters for the best display experience.</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<p>No installation is necessary. Just clone this repository or download the <code>.ps1</code> script to your local machine.</p>
+<h3 id="running-the-simulation">Running the Simulation</h3>
+<ol>
+<li>Open your PowerShell terminal.</li>
+<li>Navigate to the directory containing the <code>GameOfLife.ps1</code> script.</li>
+<li>Execute the script by running:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>.\GameOfLife.ps1
+</span></span></code></pre></div><h2 id="license">License</h2>
+<p>This project is licensed under the GNU General Public License v3.0 - see the <code>COPYING</code> file for more details.</p>
+
+  </div>
+
+  
+
+
+  <div class="share-buttons">
+  <a class="twitter-share-button"
+     href="#"
+     title="Share on Twitter"
+     data-url="http://localhost:1313/posts/pslife/"
+     data-text="PSLife"><i class="fab fa-twitter"></i></a>
+
+  <a class="linkedin-share-button"
+     href="#"
+     title="Share on LinkedIn"
+     data-url="http://localhost:1313/posts/pslife/"
+     data-text="PSLife"><i class="fab fa-linkedin-in"></i></a>
+
+  <a class="facebook-share-button"
+     href="#"
+     title="Share on Facebook"
+     data-url="http://localhost:1313/posts/pslife/"
+     data-text="PSLife"><i class="fab fa-facebook"></i></a>
+
+  <a class="telegram-share-button"
+     href="#"
+     title="Share on Telegram"
+     data-url="http://localhost:1313/posts/pslife/"
+     data-text="PSLife"><i class="fab fa-telegram"></i></a>
+
+  <a class="pinterest-share-button"
+     href="#"
+     title="Share on Pinterest"
+     data-url="http://localhost:1313/posts/pslife/"
+     data-text="PSLife"><i class="fab fa-pinterest"></i></a>
+</div>
+
+
+  
+</div>
+  </main>
+
+  <footer>
+  <div>
+    <p>
+      &copy; Dieter Beckers 2024
+
+      &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>
+
+      
+    </p>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
+
+  <script src="/js/blog.js"></script>
+
+    
+</body>
+</html>
