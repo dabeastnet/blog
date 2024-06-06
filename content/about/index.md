@@ -10,3 +10,4 @@ Dieter Beckers is an IT professional with extensive experience in technology lea
 Prior to his current role, Dieter was involved in various IT support and engineering positions focusing on manufacturing, laboratory, and logistics at companies like Simac ICT Belgium and Atos IDM BTN, where he was seconded to Johnson & Johnson. His expertise spans areas such as PowerShell scripting, automation, lifecycle management of scripts, root cause analysis, and project management.
 
 Dieter has an associate's degree in Applied Computer Science from Thomas More Kempen and certifications in English proficiency, Microsoft Azure, Cisco and Lenovo repair. He is fluent in Dutch and English and possesses strong skills in problem solving, Windows technology, and project management.
+
